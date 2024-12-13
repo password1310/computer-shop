@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านขายอุปกรณ์คอมพิวเตอร์</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        header {
+            text-align: center;
+            padding: 2em;
+            background-color: #f4f4f4;
+        }
+        section {
+            padding: 2em;
+            max-width: 800px;
+            margin: auto;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin: 1em 0;
+            display: flex;
+            align-items: center;
+        }
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 1em;
+        }
+        .product-details {
+            flex-grow: 1;
+        }
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 1em;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#products">รายการสินค้า</a>
+        <a href="#order">สั่งซื้อสินค้า</a>
+        <a href="#contact">ติดต่อเรา</a>
+    </nav>
+
+    <header>
+        <h1>ร้านขายอุปกรณ์คอมพิวเตอร์</h1>
+        <p>เราจำหน่ายอุปกรณ์คอมพิวเตอร์คุณภาพดีในราคาสุดคุ้ม!</p>
+    </header>
+
+    <section id="products">
+        <h2>รายการสินค้า</h2>
+        <div class="product">
+            <img src="https://pim-cdn0.ofm.co.th/products/original/YB13899.jpg?v=20241213&x-image-process=image/format,webp/resize,m_fixed,w_400,h_400/quality,q_100/marker,u_plus/sharpen,50" alt="คีย์บอร์ดไร้สาย">
+            <div class="product-details">
+                <h3>คีย์บอร์ดไร้สาย</h3>
+                <p>เหมาะสำหรับพนักงานออฟฟิศที่ต้องการความสะดวกสบายในการพิมพ์</p>
+                <p>ราคา: 1,200 บาท</p>
+                <p>ส่วนลด: 10%</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://pim-cdn0.ofm.co.th/products/original/4093368.png?v=20241213&x-image-process=image/format,webp/resize,m_fixed,w_400,h_400/quality,q_100/marker,u_plus/sharpen,50" alt="เมาส์เกมมิ่ง">
+            <div class="product-details">
+                <h3>เมาส์เกมมิ่ง</h3>
+                <p>ออกแบบสำหรับเกมเมอร์ที่ต้องการความแม่นยำ</p>
+                <p>ราคา: 1,500 บาท</p>
+                <p>ส่วนลด: 15%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="order">
+        <h2>สั่งซื้อสินค้า</h2>
+        <form action="submit_order.php" method="post">
+            <label for="name">ชื่อ-นามสกุล:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="address">ที่อยู่:</label><br>
+            <textarea id="address" name="address" required></textarea><br><br>
+
+            <label for="phone">เบอร์โทรศัพท์:</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="product">รายการสินค้า:</label><br>
+            <select id="product" name="product" required>
+                <option value="keyboard">คีย์บอร์ดไร้สาย</option>
+                <option value="mouse">เมาส์เกมมิ่ง</option>
+            </select><br><br>
+
+            <button type="submit">ส่งคำสั่งซื้อ</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>ติดต่อเรา</h2>
+        <div class="contact-info">
+            <p>ชื่อร้าน: ร้าน ABC Computer</p>
+            <p>เบอร์ติดต่อ: 081-234-5678</p>
+            <p>อีเมล: abccomputer@example.com</p>
+            <p>ที่ตั้ง: 123 ถนนสายไหม กรุงเทพมหานคร</p>
+        </div>
+    </section>
+
+</body>
+</html>
